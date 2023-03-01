@@ -6,8 +6,36 @@
 
 body {
     font-family: sans-serif;
+    background-color: black;
+}
+
+#lista {
+    max-width: 500px;
+    margin: 80px auto;
+    background-color: #F3E779;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 25px;
+}
+
+#lista h1 {
+    color: gray;
+    padding: 20px;
+}
+
+.product {
+    font-size: 1.3em;
+    color: darkblue;
+    padding-bottom: 30px;
 }
 
 .product:first-letter {
     text-transform: uppercase;
+}
+
+.puntina {
+    padding-top: 10px;
+    font-size: 20px;
+    color: darkgray;
 }

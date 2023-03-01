@@ -1,5 +1,5 @@
 
-let itemList = ["latte", "uova", "bacon", "PlayStation 5"];
+let itemList = ["latte", "uova", "bacon", "PlayStation 5", "Xbox Series x", "Zucchine"];
 
 let list = document.getElementById("lista");
 
