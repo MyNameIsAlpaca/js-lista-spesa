@@ -39,6 +39,7 @@ btn.addEventListener("click", function(){
             
         }
         
+        document.getElementById('add').value='' ;
     }
     
 
