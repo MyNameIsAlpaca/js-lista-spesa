@@ -1,5 +1,5 @@
 
-let itemList = ["latte", "uova", "bacon", "PlayStation 5", "Xbox Series x", "Zucchine"];
+let itemList = [];
 
 let list = document.getElementById("lista");
 
@@ -7,19 +7,30 @@ let counter = -1;
 
 let itemEl;
 
+let newEl;
 
-while (counter < itemList.length - 1) {
+let btn = document.getElementById("btn")
 
-    counter++;
+btn.addEventListener("click", function(){
 
-    itemEl = document.createElement("div");
+    newEl = document.getElementById("add").value;
 
-    itemEl.innerHTML = itemList[counter];
+    console.log(newEl)
 
-    list.append(itemEl);
+    itemList.push(newEl);
+    
+    while (counter < itemList.length - 1) {
+    
+        counter++;
+    
+        itemEl = document.createElement("div");
+    
+        itemEl.innerHTML = itemList[counter];
+    
+        list.append(itemEl);
+    
+        itemEl.classList.add("product");
+    }
 
-    itemEl.classList.add("product");
-}
+});
 
-
-console.log(itemEl);   
