@@ -1,9 +1,9 @@
 
 let itemList = [];
 
-let list = document.getElementById("lista");
+let list = document.getElementById("listProduct");
 
-let counter = -1;
+let counter = 0;
 
 let itemEl;
 
@@ -11,26 +11,40 @@ let newEl;
 
 let btn = document.getElementById("btn")
 
-btn.addEventListener("click", function(){
+let erase = document.getElementById("btn-erase")
 
+
+btn.addEventListener("click", function(){
+    
     newEl = document.getElementById("add").value;
 
-    console.log(newEl)
+    if (newEl == "") {
+        alert("Aggiungi qualcosa")
+    } else {
 
-    itemList.push(newEl);
-    
-    while (counter < itemList.length - 1) {
-    
-        counter++;
-    
-        itemEl = document.createElement("div");
-    
-        itemEl.innerHTML = itemList[counter];
-    
-        list.append(itemEl);
-    
-        itemEl.classList.add("product");
+        itemList.push(newEl);
+        
+        while (counter < itemList.length) {
+            counter++;
+
+            itemEl = document.createElement("div");
+
+            list.append(itemEl);
+            
+            itemEl.innerHTML = itemList[counter - 1];
+
+            itemEl.classList.add("product");
+            
+            console.log(counter)
+            
+        }
+        
     }
+    
 
 });
 
+
+erase.addEventListener("click", function() {
+    list.innerHTML = '';
+});
